@@ -19,9 +19,7 @@ This guide will help you download and set up the dispensary project on your loca
     - Ensure you have a local web server running. You can use software like [XAMPP](https://www.apachefriends.org/index.html), which provides Apache, PHP, and MySQL.
 2. **Place Your Project in the Web Server Directory**:
     - Move or copy your project folder (`Site dispensary`) to the web server's root directory:
-        - For **XAMPP**: `C:\xampp\htdocs\`
-        - For **WAMP**: `C:\wamp\www\`
-        - For **MAMP**: `/Applications/MAMP/htdocs/`
+         **XAMPP**: `C:\xampp\htdocs\`
 3. **Start Your Web Server**:
     - Open your web server control panel.
     - Start the Apache and MySQL services.
