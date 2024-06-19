@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<script>
+    var check = function () {
+        if (document.getElementById('password').value ==
+            document.getElementById('cpassword').value) {
+            document.getElementById('message').style.color = '#5dd05d';
+            document.getElementById('message').innerHTML = 'Matched';
+        } else {
+            document.getElementById('message').style.color = '#f55252';
+            document.getElementById('message').innerHTML = 'Not Matching';
+        }
+    }
+
+    function alphaOnly(event) {
+        var key = event.keyCode;
+        return ((key >= 65 && key <= 90) || key == 8 || key == 32);
+    };
+
+    function checklen() {
+        var pass1 = document.getElementById("password");
+        if (pass1.value.length < 6) {
+            alert("Password must be at least 6 characters long. Try again!");
+            return false;
+        }
+    }
+
+</script>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kind Heart Charity - Donation</title>
+    <style>
+        form {
+            margin-top: -140px;
+            margin-bottom: -100px;
+            /* Ajustez la valeur selon vos besoins */
+        }
+
+        footer {
+            margin-top: -100px;
+            /* Ajustez la valeur selon vos besoins */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            /* Arrière-plan global */
+        }
+    </style>
+
+    <!-- CSS FILES    -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+
+
+    <!--TemplateMo 581 Kind Heart Charity
+
+ https://templatemo.com/tm-581-kind-heart-charity -->
+
+
+
+</head>
+
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8 col-12 d-flex flex-wrap">
+                    <p class="d-flex me-4 mb-0">
+                        <i class="bi-geo-alt me-2"></i>
+                        barja , Lebanon
+                    </p>
+
+                    <p class="d-flex mb-0">
+                        <i class="bi-envelope me-2"></i>
+
+                        <a href="mailto:info@company.com">
+                            ...@....com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+                    <ul class="social-icon">
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-twitter"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-facebook"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-instagram"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-youtube"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-whatsapp"></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/icons/pharmacy.png" class="logo img-fluid" alt="">
+                <span>
+                    DISPENSARY
+                    <!--<small>Non-profit Organization</small>-->
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="index.html#section_1">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="index.html#section_2">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="index.html#section_7">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="donate-section">
+            <div class="section-overlay"></div>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 mx-auto">
+                        <form class="custom-form donate-form" action="func2.php" method="post" role="form">
+
+                            <h3 class="mb-4">Register as Patient</h3>
+
+                            <div class="row">
+
+                                <div class="row">
+                                    <div class="col-lg-6 col-12 mt-2">
+                                        <label><b>first-name</b></label>
+                                        <input type="text" class="form-control" placeholder="First Name *" name="fname"
+                                            onkeydown="return alphaOnly(event);" required />
+                                    </div>
+                                    <div class="col-lg-6 col-12 mt-2">
+                                        <label><b>last-name</b></label>
+                                        <input type="text" class="form-control" placeholder="Last Name *" name="lname"
+                                            onkeydown="return alphaOnly(event);" required />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-12 mt-2">
+                                        <label><b>email</b></label>
+                                        <input type="email" name="email" id="donation-email" pattern="[^ @]*@[^ @]*"
+                                            class="form-control" placeholder="email@gmail.com" required>
+                                    </div>
+                                    <div class="col-lg-6 col-12 mt-2">
+                                        <label><b>phone</b></label>
+                                        <input type="tel" minlength="10" maxlength="10" name="contact"
+                                            class="form-control" placeholder="Your Phone *" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-12 mt-2">
+                                        <label><b>password</b></label>
+                                        <input type="password" class="form-control" placeholder="Password *"
+                                            id="password" name="password" onkeyup='check();' required />
+                                    </div>
+
+                                    <div class="col-lg-6 col-12 mt-2">
+                                        <label><b>confirmpass</b></label>
+                                        <input type="password" class="form-control" id="cpassword"
+                                            placeholder="Confirm Password *" name="cpassword" onkeyup='check();'
+                                            required /><span id='message'></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-12">
+                                    <h5 class="mt-4 pt-1">Choose </h5>
+                                </div>
+
+                                <div class="col-lg-12 col-12 mt-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender"
+                                            id="flexRadioDefault9">
+                                        <label class="form-check-label" for="flexRadioDefault9">
+                                            <!--<i class="bi-credit-card custom-icon ms-1"></i>-->
+                                            <b> ♀ female</b>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" value="Male"
+                                            id="flexRadioDefault10">
+                                        <label class="form-check-label" for="flexRadioDefault10">
+                                            <!--<i class="bi-paypal custom-icon ms-1"></i>-->
+                                            <b>♂ male</b>
+                                        </label>
+                                    </div>
+
+                                    <a href="index1.php">Already have an account?</a>
+                                    <div class="col-lg-12 col-12">
+                                        <h5 class="mt-4 pt-1">Choose </h5>
+                                    </div>
+                                    <input type="submit" class="form-control mt-4" name="docsub1" value="Loginreg" />
+                                    <input type="submit" class="form-control mt-4" name="docsub2" value="Loginlab" />
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+        <div class="site-footer-bottom">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-7 col-12">
+                        <p class="copyright-text mb-0">Copyright © 2036 <a href="#">...</a> .....
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+                        <ul class="social-icon">
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-twitter"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-facebook"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-instagram"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-linkedin"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://youtube.com/templatemo" class="social-icon-link bi-youtube"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
